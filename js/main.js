@@ -4,3 +4,9 @@
 - A függvény neve `generateList` legyen!
 - A HTML-template egy lista, amelynek a listaelemei a kapott tömb értékeit tartalmazzák.
 */
+const generateList = (array) => {
+    const listElements = array.map(value => `<li>${value}</li>`)
+    listElements.unshift("<ul>")
+    listElements.push("</ul>")
+    return listElements.join();
+}
